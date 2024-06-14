@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
+// my main page imports
 import App from './App.jsx';
+import A
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ImageOff } from "lucide-react";
@@ -21,6 +23,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
   },
+  {}
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

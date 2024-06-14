@@ -7,9 +7,17 @@ let navOptions = [
     href: "/",
     title: "Home",
   },
+  {
+    href: "/mySongs",
+    title: "My Songs",
+  },
+  {
+    href: "/aboutMe",
+    title: "About Me",
+  }
 ];
 
-const Nav = () => {
+export const Nav1 = () => {
     return (
     <>
       <nav className="flex flex-row gap-4">
@@ -17,9 +25,9 @@ const Nav = () => {
           <Link
             key={i}
             to={nav.href}
-            className="no-underline text-black border border-transparent px-2 py-1 hover:border-white transition duration-500 rounded"
+            className="no-underline text-black px-2 py-1 hover:border-white transition duration-500 rounded"
           >
-            <p className="border border-transparent p-1 hover:border-white transition duration-500 rounded">
+            <p className="p-1 hover:border-white transition duration-500 rounded">
               {nav.title}
             </p>
           </Link>
@@ -29,4 +37,22 @@ const Nav = () => {
   );
 }
 
-export default Nav;
+export const Nav2 = () => {
+    return (
+    <>
+      <nav className="flex flex-column gap-4">
+        {navOptions.map((nav, i) => (
+          <Link
+            key={i}
+            to={nav.href}
+            className="no-underline text-white px-2 py-1 hover:border-white transition duration-500 rounded"
+          >
+            <p className="p-1 hover:border-white transition duration-500 rounded">
+              {nav.title}
+            </p>
+          </Link>
+        ))}
+      </nav>
+    </>
+  );
+}
