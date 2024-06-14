@@ -3,13 +3,13 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 
 
-function MySonges() {
+function MySongs() {
     return (
         <div>
             <Header />
                 <div>
                     <h1>
-                        My Songs 
+                        My Songs
                     </h1>
                 </div>
             <Footer />
@@ -17,4 +17,4 @@ function MySonges() {
     )
 };
 
-export default 
+export default MySongs;
