@@ -40,7 +40,7 @@ export const Nav1 = () => {
 export const Nav2 = () => {
     return (
     <>
-      <nav className="flex flex-column gap-4">
+      <nav className="flex flex-col gap-4">
         {navOptions.map((nav, i) => (
           <Link
             key={i}

@@ -4,8 +4,8 @@ import { Nav2 } from "../../State/Nav";
 
 function Footer() {
   return (
-    <div className="bg-black p-[20px]">
-      <div className="footer-container flex justify-around p-5 bg-gray-800 text-white">
+    <div className="bg-black p-[15px]">
+      <div className="footer-container flex justify-around p-[1px] bg-gray-800 text-white">
         {/* Contact */}
         <div className="footer-section flex-1 m-2 p-4 bg-gray-700">
           <h1 className="text-white">

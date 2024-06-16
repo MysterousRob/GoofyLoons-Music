@@ -15,7 +15,8 @@ export default {
         xl: '1440px',
     },
       backgroundImage: {
-        logo: "url('src/assets/pictures/OIP.jpg')"
+        logo: "url('src/assets/pictures/OIP.jpg')",
+        logo2: "url('src/assets/pictures/eye2.jpg')"
       }
     },
   },
