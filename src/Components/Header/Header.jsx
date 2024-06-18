@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav1 } from "../../State/Nav";
 import LoginPopup from "../LogIn/LogInPopUp";
 
@@ -7,7 +7,7 @@ function Header() {
   
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
-  }
+  };
 
   return (
     <div className="relative w-full">

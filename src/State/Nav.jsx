@@ -14,6 +14,10 @@ let navOptions = [
   {
     href: "/aboutMe",
     title: "About Me",
+  },
+  {
+    href: "/SongManager",
+    title: "Song Manager",
   }
 ];
 

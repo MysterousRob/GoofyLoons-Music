@@ -6,22 +6,18 @@ const LoginPopup = ({isOpen, togglePopup}) => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        const logo = document.getElementById('mainLogo');
-        if(logo) {
-            logo.addEventListener('click', togglePopup);
+        if (!isOpen){
+            setUsername('');
+            setPassword('');
+            setError('');
         }
-        return () => {
-            if (logo) {
-                logo.removeEventListener('click', togglePopup);
-            }
-        };
-    }, []);
+    }, [isOpen]);
 
     const handleLogin = (event) => {
         event.preventDefault();
 
         //change these to preferred values
-        const hardcodedUsername = 'defaultUsername';
+        const hardcodedUsername = 'MysteriousRob';
         const hardcodedPassword = 'password123';
 
         if (username === hardcodedUsername && password === hardcodedPassword) {

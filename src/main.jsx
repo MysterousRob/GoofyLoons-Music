@@ -4,7 +4,10 @@ import * as ReactDOM from "react-dom/client";
 import App from './App.jsx';
 import MySongs from "./Pages/MySongs/MySongs.jsx";
 import AboutMe from "./Pages/AboutMe/AboutMe.jsx";
+import SongManager from "./Pages/MySongs/SongManager/SongManager.jsx";
+//css imports
 import "./index.css";
+//router imports
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ImageOff } from "lucide-react";
 import reportWebVitals from "../reportWebVitals.js";
@@ -34,6 +37,11 @@ const router = createBrowserRouter([
     element: <AboutMe />,
     errorElement: <ErrorPage />                                                                                                               
   },
+  {
+    path: "/SongManager",
+    element: <SongManager />,
+    errorElement: <ErrorPage />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
