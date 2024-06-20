@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 // my main page imports
 import App from './App.jsx';
 import MySongs from "./Pages/MySongs/MySongs.jsx";
@@ -19,39 +19,24 @@ const ErrorPage = () => {
   );
 };
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/mySongs",
-    element: <MySongs />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/aboutMe",
-    element: <AboutMe />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/SongManager",
-    element: (
-      <App>
-        {({ songs, updateSongs }) => (
-          <SongManager songs={songs} updateSongs={updateSongs} />
-        )}
-      </App>
-    ),
-    errorElement: <ErrorPage />
-  }
-]);
+const Root = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/mySongs" element={<MySongs />} />
+        <Route path="/aboutMe" element={<AboutMe />} />
+        <Route path="/SongManager" element={<SongManager />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Root />
   </React.StrictMode>
 );
 
@@ -73,3 +58,5 @@ let navOptions = [
     title: "Song Manager",
   }
 ];
+
+reportWebVitals();

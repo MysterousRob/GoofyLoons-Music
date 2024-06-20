@@ -37,7 +37,7 @@ const SongBox = () => {
       </div>
       <audio ref={audioRef} onTimeUpdate={updateTime} onEnded={() => setIsPlaying(false)}>
         <source src="" type="audio/mpeg" />
-        Your Browser Does not Support the Audio Element
+        Your Browser Does not Support the Audio Elemet
       </audio>
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onCLick={playSong}>
         {isPlaying ? 'Pause' : 'Play'}
