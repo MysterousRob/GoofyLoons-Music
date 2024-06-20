@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
 import Header from '../../../Components/Header/Header';
 import Footer from '../../../Components/Footer/Footer';
 
@@ -9,7 +8,6 @@ const SongManager = ({updateSongs}) => {
     const [editingIndex, setEditingIndex] = useState(null);
     const [showForm, setShowForm] = useState(false);
     const audioRef= useRef(null);
-    const history= useHistory();
 
     const handleChange = (e) => {
         setNewSong({ ...newSong, [e.target.name]: e.target.value});

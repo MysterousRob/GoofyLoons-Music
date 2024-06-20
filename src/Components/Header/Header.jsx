@@ -18,7 +18,7 @@ function Header() {
           className="text-6xl font-bold text-black text-left cursor-pointer"
           onClick={togglePopup}
           >
-            GoonyLoons
+            <Link to="/">GoonyLoons</Link>
           </h1>
         </div> 
         <div className="absolute top-5 right-5 bg-white rounded-3xl p-[10px]">

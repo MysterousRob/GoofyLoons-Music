@@ -1,23 +1,32 @@
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-import Body from './Components/Body/Body';
+import Home from './Pages/Home/Home';
+import SongManager from './Pages/MySongs/SongManager/SongManager';
 
-function App() {
+const App = () => {
+  const [songs, setSongs] = useState([]);
+
+  const updateSongs = (updatedSongs) => {
+    setSongs(updatedSongs);
+  };
+
   return (
-    <>
-      <div className='relative min-h-screen'>
-        <div>
-          <Header />
-        </div>
-        <div>
-          <Body />
-        </div>
-        <div className='absolute bottom-0 w-full'>
-          <Footer />
-        </div>
+    <Router>
+      <div>
+        <Header />
+        <Switch>
+          <Route path="/" exact>
+            <Home songs={songs} />
+          </Route>
+          <Route path="/manage-songs">
+            <SongManager updateSongs={updateSongs} songs={songs} />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
       </div>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;
