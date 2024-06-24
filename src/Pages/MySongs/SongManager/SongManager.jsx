@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import React, { useState, useRef } from 'react';
 import Header from '../../../Components/Header/Header';
 import Footer from '../../../Components/Footer/Footer';
@@ -6,7 +5,6 @@ import Footer from '../../../Components/Footer/Footer';
 const SongManager = () => {
     const [songs, setSongs] = useState([]);    
     const [] = useState('');
-
     const [newSong, setNewSong] =  useState({ title: '', url:''});
     const [editingIndex, setEditingIndex] = useState(null);
     const [showForm, setShowForm] = useState(false);
@@ -124,7 +122,9 @@ const SongManager = () => {
                </ul>
                <audio ref={audioRef} />
            </div>
-            <Footer />
+            <div className='absolute bottom-0 w-full'>
+                <Footer />
+            </div>
         </div>
     )
 }

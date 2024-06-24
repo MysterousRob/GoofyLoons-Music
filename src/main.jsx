@@ -1,15 +1,17 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 // my main page imports
 import App from './App.jsx';
 import MySongs from "./Pages/MySongs/MySongs.jsx";
 import AboutMe from "./Pages/AboutMe/AboutMe.jsx";
 import SongManager from "./Pages/MySongs/SongManager/SongManager.jsx";
-// css imports
+//css imports
 import "./index.css";
-// router imports
+//router imports
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ImageOff } from "lucide-react";
 import reportWebVitals from "../reportWebVitals.js";
+
 
 const ErrorPage = () => {
   return (
@@ -19,44 +21,32 @@ const ErrorPage = () => {
   );
 };
 
-const Root = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/mySongs" element={<MySongs />} />
-        <Route path="/aboutMe" element={<AboutMe />} />
-        <Route path="/SongManager" element={<SongManager />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/mySongs", 
+    element: <MySongs />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/aboutMe", 
+    element: <AboutMe />,
+    errorElement: <ErrorPage />                                                                                                               
+  },
+  {
+    path: "/SongManager",
+    element: <SongManager />,
+    errorElement: <ErrorPage />
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Root />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-let navOptions = [
-  {
-    href: "/",
-    title: "Home",
-  },
-  {
-    href: "/mySongs",
-    title: "My Songs",
-  },
-  {
-    href: "/aboutMe",
-    title: "About Me",
-  },
-  {
-    href: "/SongManager",
-    title: "Song Manager",
-  }
-];
-
-reportWebVitals();

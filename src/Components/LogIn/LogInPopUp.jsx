@@ -15,7 +15,6 @@ const LoginPopup = ({isOpen, togglePopup}) => {
 
     const handleLogin = (event) => {
         event.preventDefault();
-
         //change these to preferred values
         const hardcodedUsername = 'MysteriousRob';
         const hardcodedPassword = 'password123';

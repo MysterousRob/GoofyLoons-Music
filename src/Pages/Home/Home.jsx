@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = ({ songs = [] }) => { // Default to an empty array
+const Home = ({ songs = [] }) => { 
   return (
     <div className="p-8">
       <h2 className="text-2xl mb-4">Available Songs</h2>
