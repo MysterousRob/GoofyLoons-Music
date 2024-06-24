@@ -16,7 +16,7 @@ export default {
     },
       backgroundImage: {
         logo: "url('./src/assets/pictures/OIP.jpg')",
-        logo2: "url('./src/assets/pictures/eye2.jpg')"
+        logo2: "url('./assets/pictures/eye2.jpg')"
       }
     },
   },
