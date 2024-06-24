@@ -8,15 +8,15 @@ let navOptions = [
     title: "Home",
   },
   {
-    href: "/mySongs",
+    href: "/my-songs",
     title: "My Songs",
   },
   {
-    href: "/aboutMe",
+    href: "/about-me",
     title: "About Me",
   },
   {
-    href: "/SongManager",
+    href: "/song-manager",
     title: "Song Manager",
   }
 ];

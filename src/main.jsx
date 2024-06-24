@@ -28,17 +28,17 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/mySongs", 
+    path: "/my-songs", 
     element: <MySongs />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/aboutMe", 
+    path: "/about-me", 
     element: <AboutMe />,
     errorElement: <ErrorPage />                                                                                                               
   },
   {
-    path: "/SongManager",
+    path: "/song-manager",
     element: <SongManager />,
     errorElement: <ErrorPage />
   }
