@@ -10,7 +10,7 @@ function Header() {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-pink-500">
       <div className="top-0 left-0 bg-logo2 h-64 w-full bg-cover bg-center flex items-center p-[10px] relative">
         <div className="absolute bottom-5 left-4 bg-white rounded-3xl p-[10px]">
           <h1 
